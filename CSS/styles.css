@@ -14,7 +14,6 @@
   --header-line-color: #ececec;
   --portfolio-cards-background-color: #fff;
   --portfolio-border-solid-color: #eeeeee;
-  --background-color-icon: #f5f4fa;
 }
 
 body {
@@ -112,6 +111,10 @@ body {
 .contact .link:focus {
   color: var(--hover-focus-color);
 }
+.contact .link:hover .icon-email,
+.contact .link:hover .icon-smartphone {
+  fill: #188ce8;
+}
 
 /* стилизация main */
 
@@ -168,15 +171,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-}
-
-.clients h2 {
-  font-weight: 700;
-  color: var(--black-color);
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 /* footer */
@@ -311,6 +305,10 @@ img,
   margin-right: 50px;
 }
 
+/* .hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+} */
 .spesials.section {
   padding-top: 94px;
   padding-bottom: 0;
@@ -386,7 +384,7 @@ img,
 }
 .team-text {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 10px;
 }
 
 /* ------------------------размещение портфолио */
@@ -420,279 +418,190 @@ img,
   margin-bottom: 0;
 }
 
-/* добавление элементов фона */
+/* Добавление иконок */
 
-.item.icon-email::before {
-  content: "";
-  display: inline-flex;
-  width: 16px;
-  height: 12px;
-  background-image: url(../img/svg/header/email.svg);
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
-.item.icon-tel::before {
-  content: "";
-  display: inline-flex;
-  width: 10px;
-  height: 16px;
-  background-image: url("../img/svg/header/smartphone.svg");
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
 .hero {
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/background/people.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
-.item.icon-antena::before {
-  content: "";
-  display: block;
+.icon-email {
+  width: 16px;
+  height: 12px;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+}
+
+.spesials .block {
   width: 270px;
   height: 120px;
-  background-color: var(--background-color-icon);
   outline: 1px solid red;
-  background-image: url("../img/svg/page-index/antenna\ .svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding-left: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
 }
-.item.icon-clock::before {
-  content: "";
-  display: block;
-  height: 120px;
-  width: 270px;
-  background-color: var(--background-color-icon);
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+  width: 70px;
+  height: 70px;
+}
+
+.team .block {
+  width: 206px;
+  height: 44px;
   outline: 1px solid red;
-  background-image: url("../img/svg/page-index/clock\ .svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
-.item.icon-plan::before {
-  content: "";
-  display: block;
-  height: 120px;
-  width: 270px;
-  background-color: var(--background-color-icon);
+.social-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   outline: 1px solid red;
-  background-image: url("../img/svg/page-index/diagram\ .svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
+  margin-right: 10px;
 }
-.item.icon-tecnology::before {
-  content: "";
-  display: block;
-  height: 120px;
-  width: 270px;
-  background-color: var(--background-color-icon);
-  outline: 1px solid red;
-  background-image: url("../img/svg/page-index/astronaut.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
+
+.social-block:hover {
+  background-color: #188ce8;
+  border-radius: 50%;
 }
-.client-1::before {
-  content: "";
-  display: block;
+.social-block:hover .icon-instagram,
+.social-block:hover .icon-twitter,
+.social-block:hover .icon-facebook,
+.social-block:hover .icon-linkedin {
+  fill: #ececec;
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+  height: 20px;
+  width: 20px;
+  fill: #afb1b8;
+}
+
+/* постоянные клиенты */
+
+.clients h2 {
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--black-color);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.clients .block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 92px;
   width: 170px;
+
   border: 1px solid #afb1b8;
-  background-image: url(../img/svg/page-index/clients/client1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 4px;
 }
-.client-2::before {
-  content: "";
-  display: block;
-  height: 92px;
-  width: 170px;
-  border: 1px solid #afb1b8;
-  background-image: url(../img/svg/page-index/clients/client2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.clients .block:hover {
+  border: 1px solid var(--blue-color);
 }
-.client-3::before {
-  content: "";
-  display: block;
-  height: 92px;
-  width: 170px;
-  border: 1px solid #afb1b8;
-  background-image: url(../img/svg/page-index/clients/client3.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+
+.clients .block:hover .icon-client1,
+.clients .block:hover .icon-client2,
+.clients .block:hover .icon-client3,
+.clients .block:hover .icon-client4,
+.clients .block:hover .icon-client5,
+.clients .block:hover .icon-client6 {
+  fill: #188ce8;
 }
-.client-4::before {
-  content: "";
-  display: block;
-  height: 92px;
-  width: 170px;
-  border: 1px solid #afb1b8;
-  background-image: url(../img/svg/page-index/clients/client4.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.client-5::before {
-  content: "";
-  display: block;
-  height: 92px;
-  width: 170px;
-  border: 1px solid #afb1b8;
-  background-image: url(../img/svg/page-index/clients/client5.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.client-6::before {
-  content: "";
-  display: block;
-  height: 92px;
-  width: 170px;
-  border: 1px solid #afb1b8;
-  background-image: url(../img/svg/page-index/clients/client6.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.clients .list {
+
+.clients ul {
   display: flex;
   justify-content: space-between;
 }
-/* team */
-.social-container {
-  width: 206px;
-  margin-left: 32px;
-  margin-right: 32px;
-  padding-bottom: 30px;
+.icon-client1 {
+  width: 41px;
+  height: 47px;
+  fill: #afb1b8;
 }
-.social-list {
-  list-style: none;
-  display: flex;
+.icon-client2 {
+  width: 40px;
+  height: 52px;
+  fill: #afb1b8;
 }
-.social-list li:not(:last-child) {
-  margin-right: 10px;
-}
-.icon-instagram::before {
-  content: "";
-  display: block;
-  height: 44px;
+.icon-client3 {
   width: 44px;
-  outline: 1px solid red;
-  background-image: url(../img/svg/page-index/social/instagram.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 42px;
+  fill: #afb1b8;
 }
-.icon-twitter::before {
-  content: "";
-  display: block;
-  height: 44px;
-  width: 44px;
-  outline: 1px solid red;
-  background-image: url(../img/svg/page-index/social/twitter.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-client4 {
+  width: 84px;
+  height: 40px;
+  fill: #afb1b8;
 }
-.icon-facebook::before {
-  content: "";
-  display: block;
-  height: 44px;
-  width: 44px;
-  outline: 1px solid red;
-  background-image: url(../img/svg/page-index/social/facebook.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-client5 {
+  width: 62px;
+  height: 45px;
+  fill: #afb1b8;
 }
-.icon-linkedin::before {
-  content: "";
-  display: block;
+.icon-client6 {
+  width: 94px;
   height: 44px;
-  width: 44px;
-  outline: 1px solid red;
-  background-image: url(../img/svg/page-index/social/linkedin.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #afb1b8;
 }
 
-.team .list.social {
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 30px;
-}
 /* footer */
-footer ul {
-  list-style: none;
-}
-footer .content,
-footer .social-list {
+
+.footer .container {
   display: flex;
 }
+footer .adress {
+  margin-right: 70px;
+}
+footer .block {
+  width: 206px;
+}
 
-.footer-instagram::before {
-  content: "";
-  display: block;
-  height: 44px;
-  width: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../img/svg/footer/instagram.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
+footer .block .list {
+  display: flex;
+  justify-content: space-between;
 }
-.footer-twitter::before {
-  content: "";
-  display: block;
-  height: 44px;
-  width: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../img/svg/footer/twitter.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
-.footer-facebook::before {
-  content: "";
-  display: block;
-  height: 44px;
-  width: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../img/svg/footer/facebook.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
-.footer-linkedin::before {
-  content: "";
-  display: block;
-  height: 44px;
-  width: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../img/svg/footer/linkedin.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
-footer .social-text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
+.block p {
   text-transform: uppercase;
-
   color: #ffffff;
   margin-bottom: 20px;
-}
-footer .content2 {
-  margin-top: 15px;
-  margin-left: 70px;
+  margin-top: 12px;
 }
 
-.icon {
-  outline: 1px solid red;
-  fill: #000000;
-  height: 16px;
-  width: 16px;
+footer .social-block {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+footer .icon-instagram,
+footer .icon-twitter,
+footer .icon-facebook,
+footer .icon-linkedin {
+  height: 20px;
+  width: 20px;
+  fill: #ffffff;
+}
+footer .social-block:hover {
+  background-color: #188ce8;
+  border-radius: 50%;
 }
