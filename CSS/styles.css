@@ -689,8 +689,10 @@ footer .content2 {
   margin-top: 15px;
   margin-left: 70px;
 }
+
 .icon {
+  outline: 1px solid red;
+  fill: #000000;
   height: 16px;
   width: 16px;
-  fill: #000000;
 }
