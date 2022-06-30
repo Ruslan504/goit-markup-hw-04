@@ -14,6 +14,7 @@
   --header-line-color: #ececec;
   --portfolio-cards-background-color: #fff;
   --portfolio-border-solid-color: #eeeeee;
+  --icon-fill-color: #afb1b8;
 }
 
 body {
@@ -73,6 +74,9 @@ body {
 .button-portfolio:focus {
   background-color: var(--hover-focus-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* heder */
@@ -237,7 +241,7 @@ body {
   width: 1200px; /* посмотрели на размер сетки, обязательно считаем с крайними падингами 1170+15+15 */
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 h1,
 h2,
@@ -272,6 +276,7 @@ img,
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  /* outline: 1px solid red; */
 }
 
 .site-nav .list {
@@ -294,6 +299,7 @@ img,
 }
 .contact.list {
   margin-left: auto;
+  align-items: center;
 }
 
 .contact.list,
@@ -305,10 +311,6 @@ img,
   margin-right: 50px;
 }
 
-/* .hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
-} */
 .spesials.section {
   padding-top: 94px;
   padding-bottom: 0;
@@ -411,6 +413,12 @@ img,
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.portfolio .item:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio .item:nth-child(3n) {
   margin-right: 0;
 }
@@ -445,8 +453,8 @@ img,
 .spesials .block {
   width: 270px;
   height: 120px;
-  outline: 1px solid red;
-  background-color: #f5f4fa;
+  /* outline: 1px solid red; */
+  background-color: var(--background-team-color);
   border-radius: 4px;
   padding-left: 100px;
   padding-top: 25px;
@@ -464,7 +472,7 @@ img,
 .team .block {
   width: 206px;
   height: 44px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -475,7 +483,7 @@ img,
   align-items: center;
   width: 44px;
   height: 44px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   margin-right: 10px;
 }
 
@@ -487,7 +495,7 @@ img,
 .social-block:hover .icon-twitter,
 .social-block:hover .icon-facebook,
 .social-block:hover .icon-linkedin {
-  fill: #ececec;
+  fill: var(--white-color);
 }
 
 .icon-instagram,
@@ -496,7 +504,7 @@ img,
 .icon-linkedin {
   height: 20px;
   width: 20px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 
 /* постоянные клиенты */
@@ -515,11 +523,11 @@ img,
   height: 92px;
   width: 170px;
 
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-fill-color);
   border-radius: 4px;
 }
 .clients .block:hover {
-  border: 1px solid var(--blue-color);
+  border: 1px solid;
 }
 
 .clients .block:hover .icon-client1,
@@ -528,7 +536,7 @@ img,
 .clients .block:hover .icon-client4,
 .clients .block:hover .icon-client5,
 .clients .block:hover .icon-client6 {
-  fill: #188ce8;
+  fill: var(--blue-color);
 }
 
 .clients ul {
@@ -538,32 +546,32 @@ img,
 .icon-client1 {
   width: 41px;
   height: 47px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 .icon-client2 {
   width: 40px;
   height: 52px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 .icon-client3 {
   width: 44px;
   height: 42px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 .icon-client4 {
   width: 84px;
   height: 40px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 .icon-client5 {
   width: 62px;
   height: 45px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 .icon-client6 {
   width: 94px;
   height: 44px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 
 /* footer */
@@ -584,7 +592,7 @@ footer .block .list {
 }
 .block p {
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 20px;
   margin-top: 12px;
 }
@@ -599,9 +607,9 @@ footer .icon-facebook,
 footer .icon-linkedin {
   height: 20px;
   width: 20px;
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 footer .social-block:hover {
-  background-color: #188ce8;
+  background-color: var(--blue-color);
   border-radius: 50%;
 }
