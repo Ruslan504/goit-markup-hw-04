@@ -116,8 +116,10 @@ body {
   color: var(--hover-focus-color);
 }
 .contact .link:hover .icon-email,
-.contact .link:hover .icon-smartphone {
-  fill: #188ce8;
+.contact .link:focus .icon-email,
+.contact .link:hover .icon-smartphone,
+.contact .link:focus .icon-smartphone {
+  fill: var(--hover-focus-color);
 }
 
 /* стилизация main */
@@ -443,11 +445,15 @@ img,
 .icon-email {
   width: 16px;
   height: 12px;
+  fill: var(--body-text-color);
+  margin-right: 10px;
 }
 
 .icon-smartphone {
   width: 10px;
   height: 16px;
+  fill: var(--body-text-color);
+  margin-right: 10px;
 }
 
 .spesials .block {
@@ -456,9 +462,10 @@ img,
   /* outline: 1px solid red; */
   background-color: var(--background-team-color);
   border-radius: 4px;
-  padding-left: 100px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-bottom: 30px;
 }
 .icon-antenna,
@@ -487,14 +494,19 @@ img,
   margin-right: 10px;
 }
 
-.social-block:hover {
+.social-block:hover,
+.social-block:focus {
   background-color: #188ce8;
   border-radius: 50%;
 }
 .social-block:hover .icon-instagram,
 .social-block:hover .icon-twitter,
 .social-block:hover .icon-facebook,
-.social-block:hover .icon-linkedin {
+.social-block:hover .icon-linkedin,
+.social-block:focus .icon-instagram,
+.social-block:focus .icon-twitter,
+.social-block:focus .icon-facebook,
+.social-block:focus .icon-linkedin {
   fill: var(--white-color);
 }
 
@@ -526,8 +538,9 @@ img,
   border: 1px solid var(--icon-fill-color);
   border-radius: 4px;
 }
-.clients .block:hover {
-  border: 1px solid;
+.clients .block:hover,
+.clients .block:focus {
+  border: 1px solid var(--blue-color);
 }
 
 .clients .block:hover .icon-client1,
@@ -535,7 +548,13 @@ img,
 .clients .block:hover .icon-client3,
 .clients .block:hover .icon-client4,
 .clients .block:hover .icon-client5,
-.clients .block:hover .icon-client6 {
+.clients .block:hover .icon-client6,
+.clients .block:focus .icon-client1,
+.clients .block:focus .icon-client2,
+.clients .block:focus .icon-client3,
+.clients .block:focus .icon-client4,
+.clients .block:focus .icon-client5,
+.clients .block:focus .icon-client6 {
   fill: var(--blue-color);
 }
 
@@ -595,6 +614,7 @@ footer .block .list {
   color: var(--white-color);
   margin-bottom: 20px;
   margin-top: 12px;
+  font-weight: 700;
 }
 
 footer .social-block {
@@ -609,7 +629,8 @@ footer .icon-linkedin {
   width: 20px;
   fill: var(--white-color);
 }
-footer .social-block:hover {
+footer .social-block:hover,
+footer .social-block:focus {
   background-color: var(--blue-color);
   border-radius: 50%;
 }
